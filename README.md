@@ -30,9 +30,10 @@ ngo install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 - Ensure your `$HOME/go/bin` is in your PATH:
 
-- Use: `export PATH=$PATH:$HOME/go/bin`
-
-- Then run: `source ~/.bashrc`
+```
+export PATH=$PATH:$HOME/go/bin
+source ~/.bashrc
+```
 
 # Configuration
 
@@ -42,7 +43,7 @@ In `main.go` file, replace the `addr` variable with your Shredstream Decoder's g
 
 - #### Verify Import Paths
 
-Make sure the import path of the generated package in main.go is identical to the module name and directory structure in your go.mod.
+Make sure the import path of the generated package in `main.go` is identical to the module name and directory structure in your go.mod.
 
 # Run the listener
 
