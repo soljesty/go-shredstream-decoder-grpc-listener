@@ -35,6 +35,10 @@ func main() {
         if err != nil {
             log.Fatalf("Error receiving message: %v", err)
         }
-        fmt.Printf("Transaction received: %s, Timestamp: %d\n", resp.GetTransactionJson(), resp.GetTimestamp())
+        currentTimestamp := time.Now().UnixMicro() 
+        latencyMicro := currentTimestamp - int64(resp.GetTimestamp())
+        latencyMilli := latencyMicro / 1000
+        
+        fmt.Printf("Transaction received: %s, Latency: %d ms\n", resp.GetTransactionJson(), latencyMilli)
     }
 }
