@@ -49,3 +49,6 @@ Make sure the import path of the generated package in `main.go` is identical to 
 
 To execute the client, go to the project directory in a terminal and execute:
 `go run main.go`
+
+# Contact 
+https://t.me/soljesty
